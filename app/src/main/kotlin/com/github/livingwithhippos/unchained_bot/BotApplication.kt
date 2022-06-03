@@ -283,7 +283,7 @@ class BotApplication : KoinComponent {
                         downloadScope.launch {
                             withContext(Dispatchers.IO) {
                                 val process = ProcessBuilder(
-                                    "curl",
+                                    "aria2c",
                                     wgetArguments,
                                     args
                                 ).redirectOutput(ProcessBuilder.Redirect.PIPE)
