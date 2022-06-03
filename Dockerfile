@@ -14,7 +14,7 @@ FROM azul/zulu-openjdk-alpine:18-jre
 
 RUN \
  echo "**** install runtime packages ****" && \
- apk add --no-cache wget curl
+ apk add --no-cache wget aria2c
 
 RUN mkdir /app
 COPY --from=build /home/gradle/src/build/libs/ /app/
