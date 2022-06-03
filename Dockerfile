@@ -16,8 +16,10 @@ RUN \
  echo "**** install runtime packages ****" && \
  apk add --no-cache wget
  
- RUN apt -qq update && apt -qq upgrade -y && \
-    apt -qq install -y curl \
+RUN \
+ echo "**** install runtime packages ****" && \
+ apt-get update && \
+ apt-get install -y curl
 
 RUN mkdir /app
 COPY --from=build /home/gradle/src/build/libs/ /app/
