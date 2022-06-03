@@ -49,7 +49,7 @@ class BotApplication : KoinComponent {
     // Environment variables
     private val botToken: String = getKoin().getProperty("TELEGRAM_BOT_TOKEN") ?: ""
     private val privateApiKey: String = getKoin().getProperty("PRIVATE_API_KEY") ?: ""
-    private val wgetArguments: String = getKoin().getProperty("WGET_ARGUMENTS") ?: "--no-verbose"
+    private val wgetArguments: String = getKoin().getProperty("WGET_ARGUMENTS") ?: "--show-progress"
     private val logLevelArgument: String = getKoin().getProperty("LOG_LEVEL") ?: "error"
     private val enableQuery: String = getKoin().getProperty("ENABLE_QUERIES") ?: "false"
     private val enableQueriesArgument: Boolean = enableQuery.equals("true", true) || enableQuery == "1"
