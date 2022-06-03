@@ -14,7 +14,7 @@ FROM azul/zulu-openjdk-alpine:18-jre
 
 RUN \
  echo "**** install runtime packages ****" && \
- apk add --no-cache wget
+ apk add --no-cache wget \
  apt-get install -y curl
 
 RUN mkdir /app
